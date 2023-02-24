@@ -6,8 +6,8 @@ ARG BUILD_DEPS="apt-utils software-properties-common gnupg ca-certificates apt-t
 ARG SERVICE="chirpstack-gateway-bridge"
 
 # Install build dependencies
-RUN apt-get update
-RUN apt-get install -y ${BUILD_DEPS}
+RUN apt update
+RUN apt install -y ${BUILD_DEPS}
 
 # Copy files into container
 COPY build /build
